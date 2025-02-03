@@ -1,4 +1,4 @@
-### How to run this script 
+# How to run this script 
 
 ``` bash
 chmod +x script.sh 
