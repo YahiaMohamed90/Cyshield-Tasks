@@ -1,3 +1,4 @@
+
 # Setup K8s Via Kubeadm ..
 
 Kubeadm is a tool to set up a minimum viable Kubernetes cluster without much complex configuration. Also, Kubeadm makes the whole process easy by running a series of prechecks to ensure that the server has all the essential components and configs to run Kubernetes.
@@ -77,4 +78,35 @@ sudo kubeadm join 10.128.0.37:6443 --token j4eice.33vgvgyf5cxw4u8i \
 # License
 
 [Setup-Guilde](https://devopscube.com/setup-kubernetes-cluster-kubeadm/)
+
+# Monitoring Recommendations
+
+For monitoring the application, consider the following stack:
+
+### Metrics Collection
+
+- Prometheus: Collects cluster and application metrics.
+
+- Node Exporter: Provides node-level metrics.
+
+- cAdvisor: Monitors resource usage of containers.
+
+### Visualization
+
+- Grafana: Dashboards for visualizing cluster and application performance.
+
+### Logging
+
+- Fluentd or Filebeat: Log collection and forwarding.
+
+- Elasticsearch or Loki: Log storage and search.
+
+### Alerting
+
+- Alertmanager: Triggers alerts based on Prometheus rules.
+
+By implementing this monitoring stack, you can gain insights into application performance, detect anomalies, and ensure high availability.
+
+
+
 
